@@ -48,7 +48,7 @@ _END;
     if (isset($_POST["user"]))
     {
         $user = sanitizeString($_POST['user']);
-        $pass = sanitizeString($_POST["PASS"]);
+        $pass = sanitizeString($_POST["pass"]);
 
         if ($user == "" || $pass == "")
          $error = "No all fields were entered";
