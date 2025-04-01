@@ -14,8 +14,6 @@
             request.open("POST", "checkuser.php", true)
 
             request.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
-            request.setRequestHeader("Content-length", params.length)
-            request.setRequestHeader("Connection", "close")
 
             request.onreadystatechange = function()
             {
@@ -38,7 +36,9 @@
                         request = false
                     }
                }
-            }}
+            }
+                return request
+            }
             </script>
             <div class='main'><h3>Please enter your details to sign up</h3>
 _END;
