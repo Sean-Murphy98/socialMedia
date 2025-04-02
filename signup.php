@@ -51,7 +51,7 @@ _END;
         $pass = sanitizeString($_POST["pass"]);
 
         if ($user == "" || $pass == "")
-         $error = "No all fields were entered";
+         $error = "Not all fields were entered";
         else
         {
             $result = queryMySql("SELECT * FROM members WHERE user='$user'");
@@ -75,6 +75,7 @@ _END;
         <input type='text' maxlength='16' name='pass' value='$pass'>
         <br>
 _END;
+
 ?>
 
     <span class='fieldname'>&nbsp;</span>
