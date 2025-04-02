@@ -2,7 +2,7 @@
     $dbhost = "localhost";
     $dbname = "F4Lyf";
     $dbuser = "F4Lyf";
-    $dbpass = "pNVowT6uPyU9hLJm";
+    $dbpass = "tZ))q5Mfeeq-1zzg";
     $appname = "Friends 4 Lyf";
 
     $connection = new mysqli($dbhost, $dbuser, $dbpass,$dbname);
