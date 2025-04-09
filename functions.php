@@ -1,9 +1,6 @@
 <?php
-    $dbhost = "localhost";
-    $dbname = "F4Lyf";
-    $dbuser = "F4Lyf";
-    $dbpass = "tZ))q5Mfeeq-1zzg";
-    $appname = "Friends 4 Lyf";
+
+    require_once 'sqllogin.php'; #sqllogins saved in file
 
     $connection = new mysqli($dbhost, $dbuser, $dbpass,$dbname);
     if ($connection->connect_error) die($connection->connect_error);
