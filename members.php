@@ -1,9 +1,9 @@
 <?php
  require_once 'header.php';
 
- if(!$loggedin) die();
+ if(!$loggedin) die("</div></body></html>");
 
- echo "<div class='main'>";
+
 
  if(isset($_GET["view"])) 
  {
