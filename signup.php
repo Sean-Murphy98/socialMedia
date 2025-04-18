@@ -6,7 +6,7 @@
             {
                 if(user.value == '')
                 {
-                    O('info').innerHTML= ''
+                    $('#used').html('&nbsp;')
                     return
                 }
             params = "user=" + user.value
@@ -40,7 +40,7 @@
                 return request
             }
             </script>
-            <div class='main'><h3>Please enter your details to sign up</h3>
+            <div data-role='fieldcontain'><label></label>Please enter your details to sign up</div>
 _END;
     $error = $user = $pass = "";
     if (isset($_SESSION["user"])) {destroySession();}
@@ -68,18 +68,23 @@ _END;
 
     echo <<<_END
         <form method='post' action='signup.php'>$error
-        <span class='fieldname'>Username</span>
-        <input type='text' maxlength='16' name='user' value='$user'
-            onBlur='checkUser(this)'><span id='info'></span><br>
-        <span class='fieldname'>Password</span>
-        <input type='text' maxlength='16' name='pass' value='$pass'>
+
+        <div data-role='fieldcontain'>
+            <label>Username</label>
+            <input type='text' maxlength='16' name='user' value='$user' onBlur='checkUser(this)'>
+            <label></label>
+        </div>
+        <div data-role='fieldcontain'>
+            <label>Password</label>
+            <input type='text' maxlength='16' name='pass' value='$pass'>
+        </div>
         <br>
 _END;
 
 ?>
 
     <span class='fieldname'>&nbsp;</span>
-    <input type='submit' value='Sign up'>
+    <input data-transition='slide' type='submit' value='Sign up'>
     </form></div><br>
 </body>
 </html>

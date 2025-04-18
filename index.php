@@ -11,3 +11,4 @@ else echo "please sign up and/or log in to join in.";
 </span><br><br>
 </body>
 </html>
+</div>
