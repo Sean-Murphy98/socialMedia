@@ -46,9 +46,10 @@ _INIT;
 _LOGGEDIN;
     
     else
-    echo "<br ><ul class='menu'>" .
-        "<li><a href='index.php'>Home</a></li>" .
-        "<li><a href='signup.php'>Sign up</a></li>" .
-        "<li><a href='login.php'>Log in</a></li></ul><br>" .
-        "<span class='info'>&#8658; You must be logged in to view this page. </span><br><br>";
+    echo "<div class='center'><br ><ul class='menu'>" .
+        "<a data-role='button' data-inline='true' data-icon='home' data-transition='slide' href='index.php'>Home</a>" .
+        "<a data-role='button' data-inline='true' data-transition='slide' href='signup.php'>Sign up</a>" .
+        "<a data-role='button' data-inline='true' data-transition='slide' href='login.php'>Log in</a>" . 
+        "</div>" . 
+        "<p class='info'>(You must be logged in to use this app)</p>";
 ?>
