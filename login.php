@@ -11,9 +11,14 @@
            $error = "Not all fields were entered<br>";
 
         else
-        {
-            $result = queryMySql("SELECT user,pass FROM members WHERE user='$user' AND pass='$pass'");
+        {   
+            $result = queryMySql("SELECT user,pass FROM members WHERE user='$user'");
+            $row = $result->fetch_array(MYSQLI_ASSOC);
             if ($result->num_rows == 0)
+            {
+                $error = "<span class='error'>Username/Password invalid</span><br><br>";
+            }
+            elseif (!(password_verify($pass, $row['pass'])))
             {
                 $error = "<span class='error'>Username/Password invalid</span><br><br>";
             }

@@ -60,7 +60,8 @@ _END;
              $error = "That username already exists<br><br>";
             else
             {
-                queryMySql("INSERT INTO members VALUES('$user','$pass')");
+                $hash = password_hash($pass, PASSWORD_DEFAULT);
+                queryMySql("INSERT INTO members VALUES('$user','$hash')");
                 die("<h4>Account created</h4>Please log in.<br><br>");
             }
         }
