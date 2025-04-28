@@ -25,6 +25,7 @@
             {
                 $_SESSION['user'] = $user;
                 $_SESSION['pass'] = $pass;
+                header('Location: members.php?view='.$user);
                 die("You are now logged in. Please <a href='members.php?view=$user'>" . 
                     "click here</a> to continue.<br><br>");
             }

@@ -4,6 +4,7 @@
     if (isset($_SESSION['user']))
     {
         destroySession();
+        header('Location: index.php');
         echo "<div class='main'>You have been logged out. Please " . "<a href='index.php'>click here</a> to refresh the screen. ";
 
     }
