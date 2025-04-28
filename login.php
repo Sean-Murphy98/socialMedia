@@ -1,6 +1,5 @@
 <?php
     require_once 'header.php';
-    echo "<div class='main'><h3>Please enter your details to log in</h3>";
     $error = $user = $pass= "";
     if (isset($_POST["user"]))
     {
@@ -34,15 +33,32 @@
 
     echo <<<_END
         <form method='post' action='login.php'>$error
-        <span class='fieldname'>Username</span><input type='text' maxlength='16' name='user' value='$user'><br>
-        <span class='fieldname'>Password</span><input type='password' maxlength='16' name='pass' value='$pass'>
+        <div data-role='fieldcontain'>
+            <label></label>
+            <span class='error'>$error</span>
+        </div>
+        <div data-role='fieldcontain'>
+            <label></label>
+            Please enter your details to log in
+        </div>
+        <div data-role='fieldcontain'>
+            <label>Username</label>
+            <input type='text' maxlength='16' name='user' value='$user'>
+        </div>
+        <div data-role='fieldcontain'>
+            <label>Password</label>
+            <input type='password' maxlength='16' name='pass' value='$pass'>
+        </div>
+        <div data-role='fieldcontain'>
+            <label></label>
+            <input data-transition='slide' type='submit' value='Login'>
+        </div>
+        </form>
 _END;
 ?>
 
 
     <br>
-    <span class='fieldname'>&nbsp;</span>
-    <input type='submit' value='Login'>
-    </form><br></div>
+    <br></div>
 </body>
 </html>

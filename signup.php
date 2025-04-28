@@ -79,13 +79,14 @@ _END;
             <label>Password</label>
             <input type='text' maxlength='16' name='pass' value='$pass'>
         </div>
-        <br>
+        <div data-role='fieldcontain'>
+            <label></label>
+            <input data-transition='slide' type='submit' value='Sign up'>
+        </div>
+        </form>
 _END;
 
 ?>
-
-    <span class='fieldname'>&nbsp;</span>
-    <input data-transition='slide' type='submit' value='Sign up'>
-    </form></div><br>
+    </div><br>
 </body>
 </html>
