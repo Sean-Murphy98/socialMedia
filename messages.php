@@ -33,10 +33,14 @@
 
  echo <<<_END
     <form method='post' action='messages.php?view=$view'>
-    Type here to leave a message:<br>
-    <textarea name='text' cols='40' rows='3'></textarea><br>
-    Public<input type='radio' name='pm' value='0' checked='checked'>
-    Private<input type = 'radio' name='pm' value='1'>
+    <fieldset data-role="controlgroup" data-type="horizontal">
+        <legend>Type here to leave a message:</legend>
+        <textarea name='text'></textarea>
+        <input type='radio' name='pm' value='0' id='public' checked='checked'>
+        <label for="public">Public</label>
+        <input type = 'radio' id='private' name='pm' value='1'>
+        <label for="private">Private</label>
+    </fieldset>
     <input type='submit' value='Post Message'></form><br>
 _END;
 
@@ -74,7 +78,7 @@ _END;
 
  if (!$num) echo "<br><span class='info'>No messages yet</span><br><br>";
 
- echo "<br><a class='button' href='messages.php?view=$view'>Refresh messages</a>";
+ echo "<br><a data-role='button' href='messages.php?view=$view'>Refresh messages</a>";
 ?>
 
 </div><br>

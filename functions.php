@@ -50,5 +50,6 @@
             $row = $result->fetch_array(MYSQLI_ASSOC);
             echo stripslashes($row['text']) . "<br style='clear:left;'><br>";
         }
+        else echo "<p>Nothing to see here, yet</p><br>";
     }
 ?>

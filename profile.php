@@ -1,9 +1,9 @@
 <?php
 require_once 'header.php';
 
-echo "<div class='main'><h3>Your Profile</h3>";
+if (!$loggedin) die("</div></body></html>");
 
-if (!$loggedin) die();
+echo "<div class='main'><h3>Your Profile</h3>";
 
 $result = queryMySql("SELECT * FROM profiles WHERE user='$user'");
 
@@ -79,9 +79,9 @@ if (isset($_FILES['image']['name']))
 showProfile($user);
 
 echo <<<_END
-   <form method='post' action='profile.php' enctype='multipart/form-data'>
+   <form data-ajax='false' method='post' action='profile.php' enctype='multipart/form-data'>
    <h3>Enter or edit your details and/or upload an image</h3>
-   <textarea name='text' cols='50' rows='3'>$text</textarea><br>
+   <textarea name='text'>$text</textarea><br>
 _END;
 ?>
 
